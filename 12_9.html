@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ПЗ12 Задание 8</title>
+</head>
+<body>
+    <p><b>Задание 9.<br>
+        Для массива «неизвестного» размера создать скрипт, выводящий третий элемент с конца.</b></p>
+
+        <form><p><input type="button" name="btn" value="Создать массив" onclick="massiv();"></p></form>
+
+            <div id="text"></div>
+            <script>
+                function massiv()
+            {
+                document.getElementById('text').innerHTML += 'Сгенерированный массив: <br>'
+                let n = Math.floor(Math.random() * 20), arr = [], min = 0, max = 45;
+                for(let i = 0; i < n; i++)
+                {
+                  arr[i] = Math.floor(Math.random() * (max - min+1)) + min;
+                  document.getElementById('text').innerHTML += arr[i] + '<br>';
+                }
+                document.getElementById('text').innerHTML += '<br>Третий элемент с конца: ' + arr[n-3];
+            }
+            </script>
+</body>
+</html>
